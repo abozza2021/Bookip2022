@@ -1,0 +1,9 @@
+body {
+    background-color: lightgrey;
+    background-image:url("/background.jpg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-origin: content-box;
+    box-sizing: border-box;  
+}
