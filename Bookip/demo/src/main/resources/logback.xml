@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.web" level="DEBUG"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.hibernate.SQL" additivity="false" >
+        <level value="DEBUG" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="org.hibernate.type" additivity="false" >
+        <level value="TRACE" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+</configuration>
